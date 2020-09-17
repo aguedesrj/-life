@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="OpenSans-SemiBold.ttf">
+            <string>OpenSans-SemiBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ChatViewController" customModule="Vida" customModuleProvider="target">
+            <connections>
+                <outlet property="labelTitle" destination="m50-rL-MhF" id="PwI-cL-E5q"/>
+                <outlet property="view" destination="iN0-l3-epB" id="DxO-Ag-mWu"/>
+                <outlet property="webView" destination="FDc-vd-J9I" id="47I-1N-Wvz"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FDc-vd-J9I">
+                    <rect key="frame" x="0.0" y="104" width="375" height="674"/>
+                    <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="Cmh-fG-sv0"/>
+                    </connections>
+                </webView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BiN-iv-U60">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="104"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NZW-Rd-VAn">
+                            <rect key="frame" x="26" y="55" width="34" height="34"/>
+                            <state key="normal" image="iconMainMenu"/>
+                            <connections>
+                                <action selector="pressButtonMenu:" destination="-1" eventType="touchUpInside" id="zfE-Ii-1gh"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m50-rL-MhF">
+                            <rect key="frame" x="158.66666666666666" y="57" width="58" height="30"/>
+                            <fontDescription key="fontDescription" name="OpenSans-SemiBold" family="Open Sans" pointSize="22"/>
+                            <color key="textColor" red="0.50588235290000005" green="0.16078431369999999" blue="0.56470588239999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="m50-rL-MhF" firstAttribute="centerY" secondItem="NZW-Rd-VAn" secondAttribute="centerY" id="8Vk-RO-6Ls"/>
+                        <constraint firstItem="m50-rL-MhF" firstAttribute="centerX" secondItem="BiN-iv-U60" secondAttribute="centerX" id="NL1-BM-boS"/>
+                        <constraint firstAttribute="bottom" secondItem="NZW-Rd-VAn" secondAttribute="bottom" constant="15" id="Stm-T7-R2O"/>
+                        <constraint firstItem="NZW-Rd-VAn" firstAttribute="leading" secondItem="BiN-iv-U60" secondAttribute="leading" constant="26" id="YCa-7a-b1f"/>
+                        <constraint firstAttribute="height" constant="104" id="bzF-hm-64t"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="BiN-iv-U60" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="7jV-M4-vaF"/>
+                <constraint firstItem="FDc-vd-J9I" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="GyB-qe-r3J"/>
+                <constraint firstItem="FDc-vd-J9I" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="KXw-kt-ADn"/>
+                <constraint firstItem="FDc-vd-J9I" firstAttribute="top" secondItem="BiN-iv-U60" secondAttribute="bottom" id="L1Q-7v-2O9"/>
+                <constraint firstItem="FDc-vd-J9I" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="O5x-Ds-PO4"/>
+                <constraint firstItem="BiN-iv-U60" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="cLa-dK-0g8"/>
+                <constraint firstItem="BiN-iv-U60" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="-44" id="xGJ-dZ-qyT"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="52" y="83.208395802098963"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="iconMainMenu" width="34" height="34"/>
+    </resources>
+</document>

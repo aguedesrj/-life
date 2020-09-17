@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Montserrat-SemiBold.ttf">
+            <string>Montserrat-SemiBold</string>
+        </array>
+        <array key="OpenSans-Bold.ttf">
+            <string>OpenSans-Bold</string>
+        </array>
+        <array key="OpenSans-SemiBold.ttf">
+            <string>OpenSans-SemiBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="EstablishmentsCollectionViewCell" id="gTV-IL-0wX" customClass="EstablishmentsCollectionViewCell" customModule="Vida" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="275"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="275"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ihw-t5-Mgp" customClass="GradientView" customModule="Vida" customModuleProvider="target">
+                        <rect key="frame" x="10" y="10" width="394" height="255"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Box-q5-Bvv">
+                                <rect key="frame" x="0.0" y="0.0" width="394" height="127"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="127" id="Fpb-Pn-5nz"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3sk-WG-5Mx">
+                                <rect key="frame" x="16" y="141" width="364" height="17.5"/>
+                                <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="14"/>
+                                <color key="textColor" red="0.50588235290000005" green="0.16078431369999999" blue="0.56470588239999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HoO-HO-pBN">
+                                <rect key="frame" x="16" y="165.5" width="362" height="18"/>
+                                <fontDescription key="fontDescription" name="OpenSans-SemiBold" family="Open Sans" pointSize="13"/>
+                                <color key="textColor" red="0.66274509803921566" green="0.66274509803921566" blue="0.66274509803921566" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LPP-3V-crU">
+                                <rect key="frame" x="16" y="220" width="30" height="15"/>
+                                <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="11"/>
+                                <color key="textColor" red="0.66274509800000003" green="0.66274509800000003" blue="0.66274509800000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconHomeSetaCard" translatesAutoresizingMaskIntoConstraints="NO" id="2bs-hw-Npa">
+                                <rect key="frame" x="350" y="214" width="28" height="28"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eeD-3D-oHx">
+                                <rect key="frame" x="0.0" y="0.0" width="394" height="255"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="pressButtonItemSelected:" destination="gTV-IL-0wX" eventType="touchUpInside" id="XH5-hw-6ay"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="2bs-hw-Npa" secondAttribute="bottom" constant="13" id="25B-AN-fuC"/>
+                            <constraint firstItem="HoO-HO-pBN" firstAttribute="top" secondItem="3sk-WG-5Mx" secondAttribute="bottom" constant="7" id="5Yp-ic-fZD"/>
+                            <constraint firstItem="Box-q5-Bvv" firstAttribute="leading" secondItem="Ihw-t5-Mgp" secondAttribute="leading" id="64J-sW-o7I"/>
+                            <constraint firstAttribute="trailing" secondItem="HoO-HO-pBN" secondAttribute="trailing" constant="16" id="97E-o1-dKA"/>
+                            <constraint firstItem="eeD-3D-oHx" firstAttribute="leading" secondItem="Ihw-t5-Mgp" secondAttribute="leading" id="AwF-s1-Wzc"/>
+                            <constraint firstAttribute="bottom" secondItem="LPP-3V-crU" secondAttribute="bottom" constant="20" id="GcD-mw-Wpg"/>
+                            <constraint firstAttribute="bottom" secondItem="eeD-3D-oHx" secondAttribute="bottom" id="HM7-oI-Bm1"/>
+                            <constraint firstItem="Box-q5-Bvv" firstAttribute="top" secondItem="Ihw-t5-Mgp" secondAttribute="top" id="NuA-vy-gOz"/>
+                            <constraint firstAttribute="trailing" secondItem="eeD-3D-oHx" secondAttribute="trailing" id="Up1-LV-kRH"/>
+                            <constraint firstItem="eeD-3D-oHx" firstAttribute="top" secondItem="Ihw-t5-Mgp" secondAttribute="top" id="aLS-iw-YGI"/>
+                            <constraint firstAttribute="trailing" secondItem="Box-q5-Bvv" secondAttribute="trailing" id="bud-uO-AvA"/>
+                            <constraint firstAttribute="trailing" secondItem="2bs-hw-Npa" secondAttribute="trailing" constant="16" id="fyk-Bp-mRb"/>
+                            <constraint firstItem="3sk-WG-5Mx" firstAttribute="top" secondItem="Box-q5-Bvv" secondAttribute="bottom" constant="14" id="jiL-Xt-5zR"/>
+                            <constraint firstItem="HoO-HO-pBN" firstAttribute="leading" secondItem="Ihw-t5-Mgp" secondAttribute="leading" constant="16" id="pYM-ov-1Qg"/>
+                            <constraint firstItem="LPP-3V-crU" firstAttribute="leading" secondItem="Ihw-t5-Mgp" secondAttribute="leading" constant="16" id="paM-hv-PbN"/>
+                            <constraint firstItem="3sk-WG-5Mx" firstAttribute="leading" secondItem="Ihw-t5-Mgp" secondAttribute="leading" constant="16" id="wBd-gu-PeV"/>
+                            <constraint firstAttribute="trailing" secondItem="3sk-WG-5Mx" secondAttribute="trailing" constant="14" id="zr4-2e-KhD"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="shadowX">
+                                <real key="value" value="1"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                <color key="value" red="0.50588235294117645" green="0.16078431372549018" blue="0.56470588235294117" alpha="0.20000000000000001" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="shadowY">
+                                <real key="value" value="1"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="bottomColor">
+                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="topColor">
+                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="shadowBlur">
+                                <real key="value" value="7"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="12"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="Ihw-t5-Mgp" secondAttribute="bottom" constant="10" id="1VJ-Oi-s8r"/>
+                <constraint firstItem="Ihw-t5-Mgp" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="10" id="5Eu-V3-u9w"/>
+                <constraint firstItem="Ihw-t5-Mgp" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="9CP-Tm-kKp"/>
+                <constraint firstAttribute="trailing" secondItem="Ihw-t5-Mgp" secondAttribute="trailing" constant="10" id="gbF-OF-oN9"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <connections>
+                <outlet property="imageView" destination="Box-q5-Bvv" id="G5G-7F-Edi"/>
+                <outlet property="imageViewSeeAll" destination="2bs-hw-Npa" id="OHn-cp-ao3"/>
+                <outlet property="labelAddress" destination="LPP-3V-crU" id="ugN-4p-ceR"/>
+                <outlet property="labelDescription" destination="HoO-HO-pBN" id="EqZ-bS-oI5"/>
+                <outlet property="labelTitle" destination="3sk-WG-5Mx" id="YHH-7j-Lic"/>
+                <outlet property="viewMain" destination="Ihw-t5-Mgp" id="MJg-Ii-gDw"/>
+            </connections>
+            <point key="canvasLocation" x="132.80000000000001" y="139.880059970015"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="iconHomeSetaCard" width="28" height="28"/>
+    </resources>
+</document>

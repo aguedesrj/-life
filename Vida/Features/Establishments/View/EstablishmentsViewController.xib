@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Montserrat-SemiBold.ttf">
+            <string>Montserrat-SemiBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EstablishmentsViewController" customModule="Vida" customModuleProvider="target">
+            <connections>
+                <outlet property="buttonBack" destination="FvC-iw-QKm" id="Yc3-uC-mOR"/>
+                <outlet property="buttonFilter" destination="lf9-4f-QFK" id="kT8-VA-0x2"/>
+                <outlet property="collectionViewEstablishments" destination="NwV-fw-dV5" id="mg1-9b-TfY"/>
+                <outlet property="labelTitle" destination="tQv-kn-sn2" id="uLR-7B-1xO"/>
+                <outlet property="view" destination="iN0-l3-epB" id="4u0-Zs-RKK"/>
+                <outlet property="viewHeader" destination="YsH-pN-NH3" id="029-Nj-VHC"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="NwV-fw-dV5">
+                    <rect key="frame" x="16" y="80" width="343" height="587"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="15" minimumInteritemSpacing="15" id="hhf-UK-tJW">
+                        <size key="itemSize" width="330" height="275"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                    <cells/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="WIv-rN-C2x"/>
+                        <outlet property="delegate" destination="-1" id="dHi-6A-GhI"/>
+                    </connections>
+                </collectionView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YsH-pN-NH3">
+                    <rect key="frame" x="0.0" y="-24" width="375" height="104"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FvC-iw-QKm">
+                            <rect key="frame" x="26" y="50" width="44" height="44"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="44" id="ZQD-pY-HiO"/>
+                                <constraint firstAttribute="width" constant="44" id="unv-lV-5GM"/>
+                            </constraints>
+                            <state key="normal" image="iconSetaBack"/>
+                            <connections>
+                                <action selector="pressButtonBack:" destination="-1" eventType="touchUpInside" id="nno-pA-z61"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tQv-kn-sn2">
+                            <rect key="frame" x="159.5" y="59.5" width="56" height="25"/>
+                            <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="20"/>
+                            <color key="textColor" red="0.50588235290000005" green="0.16078431369999999" blue="0.56470588239999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lf9-4f-QFK">
+                            <rect key="frame" x="305" y="50" width="44" height="44"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="44" id="RUb-2D-H1L"/>
+                                <constraint firstAttribute="width" constant="44" id="sKB-vu-6Cz"/>
+                            </constraints>
+                            <state key="normal" image="iconMainFilterReset"/>
+                            <connections>
+                                <action selector="pressButtonFilter:" destination="-1" eventType="touchUpInside" id="LV4-Xv-ZsM"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="FvC-iw-QKm" firstAttribute="leading" secondItem="YsH-pN-NH3" secondAttribute="leading" constant="26" id="6Z8-Sc-8Ao"/>
+                        <constraint firstAttribute="height" constant="104" id="GIJ-7o-feb"/>
+                        <constraint firstItem="tQv-kn-sn2" firstAttribute="centerY" secondItem="FvC-iw-QKm" secondAttribute="centerY" id="PK8-Iq-2LU"/>
+                        <constraint firstItem="lf9-4f-QFK" firstAttribute="centerY" secondItem="FvC-iw-QKm" secondAttribute="centerY" id="Wuq-8s-Ldu"/>
+                        <constraint firstAttribute="bottom" secondItem="FvC-iw-QKm" secondAttribute="bottom" constant="10" id="XZd-VW-tOP"/>
+                        <constraint firstAttribute="trailing" secondItem="lf9-4f-QFK" secondAttribute="trailing" constant="26" id="eus-fU-87s"/>
+                        <constraint firstItem="tQv-kn-sn2" firstAttribute="centerX" secondItem="YsH-pN-NH3" secondAttribute="centerX" id="n83-v6-Egb"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="YsH-pN-NH3" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="1qQ-ob-y8E"/>
+                <constraint firstItem="YsH-pN-NH3" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="-44" id="6CD-Cb-1cb"/>
+                <constraint firstItem="YsH-pN-NH3" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="7i5-GO-aCe"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="NwV-fw-dV5" secondAttribute="trailing" constant="16" id="HBs-Kb-0i2"/>
+                <constraint firstItem="NwV-fw-dV5" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="RoF-z1-Zty"/>
+                <constraint firstItem="NwV-fw-dV5" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="bfD-Bz-XqF"/>
+                <constraint firstItem="NwV-fw-dV5" firstAttribute="top" secondItem="YsH-pN-NH3" secondAttribute="bottom" id="f7s-w2-cdc"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="40.799999999999997" y="46.326836581709152"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="iconMainFilterReset" width="34" height="34"/>
+        <image name="iconSetaBack" width="44" height="44"/>
+    </resources>
+</document>

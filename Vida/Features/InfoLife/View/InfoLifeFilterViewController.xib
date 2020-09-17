@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Montserrat-SemiBold.ttf">
+            <string>Montserrat-SemiBold</string>
+        </array>
+        <array key="OpenSans-Bold.ttf">
+            <string>OpenSans-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="InfoLifeFilterViewController" customModule="Vida" customModuleProvider="target">
+            <connections>
+                <outlet property="buttonOK" destination="YL1-Dh-fIk" id="VDp-Yj-ocX"/>
+                <outlet property="collectionViewInfoLife" destination="4Og-bl-3aG" id="aY9-zL-lyB"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Defina um filtro" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cbz-1r-CHV">
+                    <rect key="frame" x="26" y="50" width="133" height="20"/>
+                    <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="16"/>
+                    <color key="textColor" red="0.50588235290000005" green="0.16078431369999999" blue="0.56470588239999997" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YL1-Dh-fIk">
+                    <rect key="frame" x="285" y="42.5" width="64" height="35"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="64" id="1Py-MK-u5c"/>
+                        <constraint firstAttribute="height" constant="35" id="rao-yy-1oQ"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="13"/>
+                    <state key="normal" title="OK">
+                        <color key="titleColor" red="0.50588235290000005" green="0.16078431369999999" blue="0.56470588239999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="pressButtonOK:" destination="-1" eventType="touchUpInside" id="Yyk-ht-8eP"/>
+                    </connections>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rka-Je-fty">
+                    <rect key="frame" x="0.0" y="90" width="375" height="1"/>
+                    <color key="backgroundColor" red="0.89411764705882346" green="0.89411764705882346" blue="0.89411764705882346" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="UDN-Fz-Ajd"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Tema" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OQL-7u-aZ4">
+                    <rect key="frame" x="26" y="122" width="38" height="19.5"/>
+                    <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="14"/>
+                    <color key="textColor" red="0.96078431372549022" green="0.50980392156862742" blue="0.12549019607843137" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="4Og-bl-3aG">
+                    <rect key="frame" x="26" y="161.5" width="323" height="505.5"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="EQD-kQ-h1J">
+                        <size key="itemSize" width="94" height="94"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                    <cells/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="Mpb-Yk-5TX"/>
+                        <outlet property="delegate" destination="-1" id="TF0-Ir-Vvh"/>
+                    </connections>
+                </collectionView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="OQL-7u-aZ4" firstAttribute="top" secondItem="Rka-Je-fty" secondAttribute="bottom" constant="31" id="2fm-kQ-5ob"/>
+                <constraint firstItem="Cbz-1r-CHV" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="26" id="58B-sc-0zm"/>
+                <constraint firstItem="Rka-Je-fty" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="6xm-33-Kc3"/>
+                <constraint firstItem="YL1-Dh-fIk" firstAttribute="centerY" secondItem="Cbz-1r-CHV" secondAttribute="centerY" id="E30-wX-hWE"/>
+                <constraint firstItem="4Og-bl-3aG" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="GIz-pZ-7s5"/>
+                <constraint firstAttribute="trailing" secondItem="Rka-Je-fty" secondAttribute="trailing" id="Iho-eb-9ss"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="YL1-Dh-fIk" secondAttribute="trailing" constant="26" id="dbb-KR-omt"/>
+                <constraint firstItem="Cbz-1r-CHV" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="30" id="djj-hx-6gY"/>
+                <constraint firstItem="4Og-bl-3aG" firstAttribute="top" secondItem="OQL-7u-aZ4" secondAttribute="bottom" constant="20" id="e2S-DK-OkZ"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="4Og-bl-3aG" secondAttribute="trailing" constant="26" id="mVB-If-Zx3"/>
+                <constraint firstItem="Rka-Je-fty" firstAttribute="bottom" secondItem="Cbz-1r-CHV" secondAttribute="bottom" constant="21" id="mee-lK-QUQ"/>
+                <constraint firstItem="OQL-7u-aZ4" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="26" id="qNy-8m-mPf"/>
+                <constraint firstItem="4Og-bl-3aG" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="26" id="qRz-Pq-ftN"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="52" y="50.824587706146929"/>
+        </view>
+    </objects>
+</document>

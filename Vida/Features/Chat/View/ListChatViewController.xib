@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="OpenSans-SemiBold.ttf">
+            <string>OpenSans-SemiBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ListChatViewController" customModule="Vida" customModuleProvider="target">
+            <connections>
+                <outlet property="labelTitle" destination="m50-rL-MhF" id="FRr-zD-QjL"/>
+                <outlet property="tableViewListChat" destination="UuK-ij-X5l" id="RiX-42-ACQ"/>
+                <outlet property="view" destination="iN0-l3-epB" id="C54-VK-xbI"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BiN-iv-U60">
+                    <rect key="frame" x="0.0" y="-24" width="375" height="104"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NZW-Rd-VAn">
+                            <rect key="frame" x="20" y="50" width="44" height="44"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="44" id="obO-bt-i7j"/>
+                                <constraint firstAttribute="width" constant="44" id="tT9-yw-fmk"/>
+                            </constraints>
+                            <state key="normal" image="iconMainMenu"/>
+                            <connections>
+                                <action selector="pressButtonMenu:" destination="-1" eventType="touchUpInside" id="ZU2-JH-OzX"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m50-rL-MhF">
+                            <rect key="frame" x="158.5" y="57" width="58" height="30"/>
+                            <fontDescription key="fontDescription" name="OpenSans-SemiBold" family="Open Sans" pointSize="22"/>
+                            <color key="textColor" red="0.50588235290000005" green="0.16078431369999999" blue="0.56470588239999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="NZW-Rd-VAn" firstAttribute="top" secondItem="BiN-iv-U60" secondAttribute="top" constant="50" id="1N5-jm-DZ8"/>
+                        <constraint firstItem="NZW-Rd-VAn" firstAttribute="leading" secondItem="BiN-iv-U60" secondAttribute="leading" constant="20" id="CL1-yE-em6"/>
+                        <constraint firstItem="m50-rL-MhF" firstAttribute="centerY" secondItem="NZW-Rd-VAn" secondAttribute="centerY" id="PTg-nr-CCV"/>
+                        <constraint firstAttribute="height" constant="104" id="bzF-hm-64t"/>
+                        <constraint firstItem="m50-rL-MhF" firstAttribute="centerX" secondItem="BiN-iv-U60" secondAttribute="centerX" id="pAw-6X-sFI"/>
+                    </constraints>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="UuK-ij-X5l">
+                    <rect key="frame" x="15" y="80" width="340" height="587"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="42D-FO-GSa"/>
+                        <outlet property="delegate" destination="-1" id="LiO-oh-p23"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="UuK-ij-X5l" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="15" id="1Es-bC-pjO"/>
+                <constraint firstItem="UuK-ij-X5l" firstAttribute="top" secondItem="BiN-iv-U60" secondAttribute="bottom" id="2Yp-ai-wOu"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="UuK-ij-X5l" secondAttribute="trailing" constant="20" id="59J-HA-BZV"/>
+                <constraint firstItem="BiN-iv-U60" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="7jV-M4-vaF"/>
+                <constraint firstItem="BiN-iv-U60" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="cLa-dK-0g8"/>
+                <constraint firstItem="UuK-ij-X5l" firstAttribute="bottom" secondItem="iN0-l3-epB" secondAttribute="bottom" id="qmO-Kp-YEU"/>
+                <constraint firstItem="BiN-iv-U60" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="-44" id="xGJ-dZ-qyT"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="52" y="83.208395802098963"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="iconMainMenu" width="34" height="34"/>
+    </resources>
+</document>

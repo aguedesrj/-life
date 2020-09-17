@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="OpenSans-SemiBold.ttf">
+            <string>OpenSans-SemiBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TutorialViewController" customModule="Vida" customModuleProvider="target">
+            <connections>
+                <outlet property="collectionViewCards" destination="WXQ-ew-Pr0" id="Jdo-gv-F0o"/>
+                <outlet property="constraintBottonCollectionView" destination="67H-03-pO5" id="aqM-aG-obi"/>
+                <outlet property="constraintTopCollectionView" destination="rJf-yC-Cwy" id="2G4-Ep-23s"/>
+                <outlet property="constraintTopLabelDescription" destination="btV-TW-I3v" id="M2D-1S-gjv"/>
+                <outlet property="pageControl" destination="gUe-Q5-xhh" id="VM0-Or-D4D"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imgTutorialLogoVida" translatesAutoresizingMaskIntoConstraints="NO" id="Krc-FI-mVU">
+                    <rect key="frame" x="37" y="47" width="144" height="22"/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RoF-Yt-Dib">
+                    <rect key="frame" x="297" y="43" width="42" height="30"/>
+                    <fontDescription key="fontDescription" name="OpenSans-SemiBold" family="Open Sans" pointSize="13"/>
+                    <state key="normal" title="PULAR">
+                        <color key="titleColor" red="0.50588235290000005" green="0.16078431369999999" blue="0.56470588239999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="pressButtonJump:" destination="-1" eventType="touchUpInside" id="sz3-FC-20i"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Somos um progama corporativo que facilita o acesso a serviços, produtos e informações, relacionadaos a qualidade de vida." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Isd-p4-sS2">
+                    <rect key="frame" x="37" y="103" width="301" height="53.5"/>
+                    <fontDescription key="fontDescription" name="OpenSans-SemiBold" family="Open Sans" pointSize="13"/>
+                    <color key="textColor" red="0.50588235290000005" green="0.16078431369999999" blue="0.56470588239999997" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="imgTutorialBackground" translatesAutoresizingMaskIntoConstraints="NO" id="jRW-y7-ZoT">
+                    <rect key="frame" x="0.0" y="180" width="375" height="427"/>
+                </imageView>
+                <collectionView multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="WXQ-ew-Pr0">
+                    <rect key="frame" x="0.0" y="210" width="375" height="367"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="0.0" id="mQ5-P0-5EH" customClass="FAPaginationLayout" customModule="Vida" customModuleProvider="target">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="ar5-Ap-UpY"/>
+                        <outlet property="delegate" destination="-1" id="ry8-GI-Wy4"/>
+                    </connections>
+                </collectionView>
+                <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="gUe-Q5-xhh">
+                    <rect key="frame" x="168" y="615" width="39" height="37"/>
+                </pageControl>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="jRW-y7-ZoT" secondAttribute="bottom" constant="60" id="67H-03-pO5"/>
+                <constraint firstItem="RoF-Yt-Dib" firstAttribute="centerY" secondItem="Krc-FI-mVU" secondAttribute="centerY" id="74C-rZ-sbg"/>
+                <constraint firstItem="WXQ-ew-Pr0" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="Bhd-6U-Sfo"/>
+                <constraint firstItem="gUe-Q5-xhh" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="CC1-lS-ETw"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="RoF-Yt-Dib" secondAttribute="trailing" constant="36" id="Hs6-Fk-zfx"/>
+                <constraint firstItem="jRW-y7-ZoT" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="JYm-fL-txd"/>
+                <constraint firstItem="WXQ-ew-Pr0" firstAttribute="top" secondItem="jRW-y7-ZoT" secondAttribute="top" constant="30" id="Kvb-73-Hyn"/>
+                <constraint firstItem="Krc-FI-mVU" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="27" id="T6S-QM-srW"/>
+                <constraint firstItem="WXQ-ew-Pr0" firstAttribute="bottom" secondItem="jRW-y7-ZoT" secondAttribute="bottom" constant="-30" id="TUF-bg-dl2"/>
+                <constraint firstItem="WXQ-ew-Pr0" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="XVr-Fb-160"/>
+                <constraint firstItem="Isd-p4-sS2" firstAttribute="top" secondItem="RoF-Yt-Dib" secondAttribute="bottom" constant="30" id="btV-TW-I3v"/>
+                <constraint firstItem="Krc-FI-mVU" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="37" id="ebP-SQ-eia"/>
+                <constraint firstItem="gUe-Q5-xhh" firstAttribute="top" secondItem="jRW-y7-ZoT" secondAttribute="bottom" constant="8" id="gGI-2g-atw"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Isd-p4-sS2" secondAttribute="trailing" constant="37" id="nmf-xl-7xf"/>
+                <constraint firstItem="jRW-y7-ZoT" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="ppx-k0-i7z"/>
+                <constraint firstItem="jRW-y7-ZoT" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="160" id="rJf-yC-Cwy"/>
+                <constraint firstItem="Isd-p4-sS2" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="37" id="xuu-HO-f6A"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="131.25" y="154.22535211267606"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="imgTutorialBackground" width="375" height="464"/>
+        <image name="imgTutorialLogoVida" width="144" height="22"/>
+    </resources>
+</document>

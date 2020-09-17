@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="OpenSans-SemiBold.ttf">
+            <string>OpenSans-SemiBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ChatLocalTableViewCell" id="KGk-i7-Jjw" customClass="ChatLocalTableViewCell" customModule="Vida" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ion-ww-VL0">
+                        <rect key="frame" x="251.5" y="5" width="60.5" height="33.5"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kdg-Ap-dPe">
+                                <rect key="frame" x="12" y="7" width="36.5" height="19.5"/>
+                                <fontDescription key="fontDescription" name="OpenSans-SemiBold" family="Open Sans" pointSize="14"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Kdg-Ap-dPe" firstAttribute="leading" secondItem="Ion-ww-VL0" secondAttribute="leading" constant="12" id="Mgj-Vp-k9I"/>
+                            <constraint firstItem="Kdg-Ap-dPe" firstAttribute="top" secondItem="Ion-ww-VL0" secondAttribute="top" constant="7" id="SLF-nd-LnG"/>
+                            <constraint firstAttribute="trailing" secondItem="Kdg-Ap-dPe" secondAttribute="trailing" constant="12" id="UJl-rq-T5g"/>
+                            <constraint firstAttribute="bottom" secondItem="Kdg-Ap-dPe" secondAttribute="bottom" constant="7" id="xqc-y7-Vo5"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hora" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p2D-xF-b7j">
+                        <rect key="frame" x="222.5" y="26.5" width="24" height="12"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Ion-ww-VL0" firstAttribute="leading" secondItem="p2D-xF-b7j" secondAttribute="trailing" constant="5" id="2qm-2Z-igS"/>
+                    <constraint firstAttribute="trailing" secondItem="Ion-ww-VL0" secondAttribute="trailing" constant="8" id="BH8-Ze-iap"/>
+                    <constraint firstItem="p2D-xF-b7j" firstAttribute="bottom" secondItem="Ion-ww-VL0" secondAttribute="bottom" id="DjI-yQ-bQI"/>
+                    <constraint firstItem="Ion-ww-VL0" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="Pr6-lY-cQp"/>
+                    <constraint firstAttribute="bottom" secondItem="Ion-ww-VL0" secondAttribute="bottom" constant="5" id="n0P-r5-boY"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="labelHour" destination="p2D-xF-b7j" id="vus-ln-rrc"/>
+                <outlet property="labelMessage" destination="Kdg-Ap-dPe" id="pdR-Ys-HDP"/>
+                <outlet property="viewMain" destination="Ion-ww-VL0" id="rh6-x0-eBy"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+</document>
